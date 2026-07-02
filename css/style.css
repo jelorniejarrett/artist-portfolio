@@ -1,0 +1,499 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+
+:root {
+
+    --paper: #f2f0eb;
+
+    --dark-paper: #2a1518;
+
+    --cloud: #f5f1e8;
+
+    --ink: #0f0f0f;
+
+    --blood: #7d2f38;
+
+    --blood-light: #a54d57;
+
+    --accent: #d4b98c;
+
+    --gray: #c4bdb5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background: #3a1f22;
+
+    color: var(--cloud);
+}
+
+/* ========================================
+         LOGO BACKGROUND
+======================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        url("../images/Logo.svg");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+        filter: invert(1);
+
+    background-size: 900px;
+
+    opacity: .2;
+
+    z-index: -2;
+}
+/*
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(242,240,235,.90),
+            rgba(242,240,235,.90)
+        ),
+        url("../images/Logo.svg");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: 900px;
+
+    opacity: .5;
+
+    pointer-events: none;
+
+    z-index: -2;
+}*/
+
+/* ========================================
+   HALFTONE DOT OVERLAY
+======================================== */
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            rgba(255, 204, 209, 0.2) 1px,
+            transparent 2px
+        );
+
+    background-size: 16px 16px;
+
+    opacity: .7;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+
+    position: relative;
+
+    background: var(--paper);
+
+    border-bottom: 4px solid var(--cloud);
+
+    overflow: hidden;
+}
+
+.navbar::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        url("../images/Crush-paper.png");
+
+    background-size: cover;
+
+    opacity: .7;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.navbar > * {
+
+    position: relative;
+
+    z-index: 1;
+}
+
+.logo img {
+
+    height: 80px;
+
+    width: auto;
+
+    transition: .3s;
+}
+
+.logo img:hover {
+
+    transform:
+        rotate(-3deg)
+        scale(1.05);
+}
+
+.nav-links {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 25px;
+}
+
+.nav-links a {
+
+    text-decoration: none;
+
+    color: var(--dark-paper);
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    transition: .3s;
+}
+
+.nav-links a:hover {
+
+    color: var(--blood);
+
+    transform:
+        rotate(-2deg);
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.hero {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 50px;
+}
+
+.hero-content h2 {
+
+    font-size: clamp(3rem, 8vw, 6rem);
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: 6px;
+
+    color: var(--cloud);
+
+    text-shadow:
+        5px 5px 0 var(--blood);
+
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+    color: var(--gray);
+}
+
+/* ========================================
+   IMAGE BUTTONS
+======================================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+    margin-top: 40px;
+}
+
+.image-button {
+
+    position: relative;
+
+    display: inline-block;
+
+    overflow: hidden;
+}
+
+
+.image-button img {
+
+    width: 280px;
+
+    height: auto;
+
+    cursor: pointer;
+
+    transition: .4s ease;
+
+    filter:
+        drop-shadow(6px 6px 0 var(--ink));
+}
+
+
+.image-button img:hover {
+
+    transform:
+        rotate(-3deg)
+        scale(1.08);
+
+    filter:
+        grayscale(100%)
+        drop-shadow(6px 6px 0 var(--ink))
+        blur(4px)
+        url(#halftone);
+
+    color: rgba(0,0,0,.55);
+
+}
+
+/*
+.image-button::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    color: rgba(0,0,0,.55);
+
+    /* background: ; 
+
+    opacity: 0.15;
+
+    transition: .35s ease;
+
+    pointer-events: none;
+}
+ 
+*/
+
+.button-label {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    color: rgb(236, 0, 0); 
+
+    font-size: 2rem;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    opacity: 0;
+
+    transition: .4s ease;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.image-button:hover .button-label {
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1.03);
+}
+
+/* ========================================
+   SECTION HEADINGS
+======================================== */
+
+.featured h2,
+.gallery-title,
+.commission-title {
+
+    font-size: 3rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        3px 3px 0 var(--blood);
+}
+
+/* ========================================
+   FEATURED ART
+======================================== */
+
+.featured {
+
+    padding: 80px 60px;
+}
+
+.art-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+}
+
+.art-card {
+
+    background: white;
+
+    padding: 10px;
+
+    border: 3px solid black;
+
+    box-shadow:
+        8px 8px 0 var(--ink);
+
+    transition: .3s;
+}
+
+.art-card:hover {
+
+    transform:
+        translate(-4px,-4px);
+
+    box-shadow:
+        12px 12px 0 var(--blood);
+}
+
+.art-card img {
+
+    width: 100%;
+
+    display: block;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 40px;
+
+    color: var(--muted);
+
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .card-content {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero-content h2 {
+
+        letter-spacing: 2px;
+    }
+
+    .hero-buttons {
+
+        gap: 20px;
+    }
+
+    .image-button img {
+
+        width: 200px;
+    }
+}

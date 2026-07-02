@@ -1,0 +1,497 @@
+/* ========================================
+   PAGE BACKGROUND
+======================================== */
+
+.director-page{
+
+    min-height: 100vh;
+
+    padding: 120px 20px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.25)
+    ),
+}
+
+/* ========================================
+   FILE CONTAINER
+======================================== */
+
+.registry-file{
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 50px;
+
+    background: var(--paper);
+
+    color: #2a1518;
+
+    border: 4px solid var(--ink);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.35);
+
+    position: relative;
+
+    animation:dossierOpen .8s ease;
+}
+
+
+.registry-file::before{
+
+
+    background:
+        url("../images/Logo.svg");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: 500px;
+
+    opacity: .2;
+
+    z-index: -2;
+
+    top: -40px;
+    left: 40px;
+
+    background: #d8c6a6;
+
+    padding: 12px 25px;
+
+    border: 3px solid var(--ink);
+
+    border-bottom: none;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+/* ========================================
+   HEADINGS
+======================================== */
+
+.registry-file h1{
+
+    text-align: center;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+.registry-file h2{
+
+    text-align: center;
+
+    color: var(--blood);
+
+    margin-bottom: 15px;
+}
+
+/* ========================================
+   REGISTRY STAMP
+======================================== */
+
+.registry-stamp{
+
+    display:table;
+
+    margin:20px auto;
+
+    padding:10px 20px;
+
+    border:3px solid var(--blood);
+
+    color:var(--blood);
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    transform:
+        rotate(-4deg)
+        scale(.5);
+
+    opacity:0;
+
+    transition:.5s;
+
+}
+
+.registry-stamp.active{
+
+    opacity:.75;
+
+    transform:
+        rotate(-4deg)
+        scale(1);
+
+}
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.director-description{
+
+    text-align: center;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+
+    margin: 30px auto;
+
+    color: #2a1518;
+
+}
+
+/* ========================================
+   FORM
+======================================== */
+
+.director-form{
+
+    display: grid;
+
+    gap: 15px;
+
+    max-width: 550px;
+
+    margin: 40px auto;
+}
+
+.director-form label{
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+.director-form select{
+
+    padding: 14px;
+
+    background: white;
+
+    border: 2px solid var(--blood);
+
+    font-size: 1rem;
+}
+
+/* ========================================
+   BUTTON
+======================================== */
+
+#scanButton{
+
+    margin-top: 10px;
+
+    padding: 18px;
+
+    background: var(--blood);
+
+    color: white;
+
+    border: 3px solid var(--ink);
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    transition: .2s;
+}
+
+#scanButton:hover{
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 15px rgba(0,0,0,.25);
+}
+
+/* ========================================
+   RESULTS
+======================================== */
+
+.results{
+
+    margin-top: 50px;
+}
+
+/* ========================================
+   LOADING SCREEN
+======================================== */
+
+.scan-loading{
+
+    text-align: center;
+
+    padding: 40px;
+}
+
+.loading-bar{
+
+    width: 100%;
+
+    height: 20px;
+
+    background: #ccc;
+
+    border: 2px solid var(--ink);
+
+    margin-top: 20px;
+
+    overflow: hidden;
+}
+
+.loading-fill{
+
+    width: 0%;
+
+    height: 100%;
+
+    background: var(--blood);
+
+    animation:
+    scanLoad 2s linear forwards;
+}
+
+@keyframes scanLoad{
+
+    from{
+
+        width: 0%;
+    }
+
+    to{
+
+        width: 100%;
+    }
+}
+
+/* ========================================
+   RESULT CARD
+======================================== */
+
+.result-card{
+
+    max-width: 750px;
+
+    margin: auto;
+
+    background: white;
+
+    border: 3px solid var(--blood);
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.2);
+}
+
+.result-card img{
+
+    width: 100%;
+
+    display: block;
+}
+
+.result-info{
+
+    padding: 30px;
+}
+
+.compatibility{
+
+    font-size: 2rem;
+
+    color: var(--blood);
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.report{
+
+    margin-top: 20px;
+
+    border-top: 2px solid var(--ink);
+
+    padding-top: 20px;
+
+    line-height: 2;
+}
+
+/* ========================================
+   WATERMARK
+======================================== */
+/*
+.registry-file::after{
+
+    content: "MASTER ILLUSTRATOR REGISTRY";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+    translate(-50%, -50%)
+    rotate(-30deg);
+
+    font-size: 5rem;
+
+    font-weight: bold;
+
+    color: rgba(0,0,0,.04);
+
+    pointer-events: none;
+
+    white-space: nowrap;
+}*/
+
+.registry-file::after{
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+    translate(-50%, -50%);
+
+    width: 700px;
+    height: 700px;
+
+    background-image:
+        url("../images/logo.svg");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: contain;
+
+    opacity: 0.05;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.analysis-layout{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:30px;
+
+    margin-top:50px;
+}
+
+.registry-panel,
+.results-panel{
+
+    background:var(--paper);
+
+    border:4px solid var(--ink);
+
+    padding:30px;
+
+    min-height:700px;
+
+    position:relative;
+}
+
+.waiting-state{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    opacity:.7;
+}
+
+.error-card{
+
+    border: 3px solid #b22222;
+
+    background: #fff4f4;
+
+    color: #7a0000;
+
+    padding: 30px;
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.15);
+}
+
+.error-card h3{
+
+    margin-bottom: 10px;
+
+    letter-spacing: 3px;
+}
+
+@keyframes dossierOpen{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+
+}
+
+@media(max-width:900px){
+
+    .analysis-layout{
+
+        grid-template-columns:1fr;
+    }
+}

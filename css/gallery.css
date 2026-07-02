@@ -1,0 +1,485 @@
+
+/* ========================================
+   GALLERY
+======================================== */
+.gallery-page {
+
+    padding: 50px;
+}
+
+.gallery-page h1 {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    color: var(--cloud);
+}
+
+#searchBar {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    display: block;
+
+    margin: 0 auto 40px;
+
+    padding: 15px;
+
+    font-size: 1rem;
+
+    border: 3px solid var(--cloud);
+
+    background: var(--paper);
+
+    color: var(--cloud);
+
+    border-radius: 10px;
+}
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(350px, 1fr));
+
+    gap: 30px;
+}
+
+.gallery-item {
+
+    background: var(--paper);
+
+    border: 3px solid var(--cloud);
+
+    overflow: hidden;
+
+    transition: .3s;
+
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+
+    transform:
+        translateY(-5px)
+        rotate(-1deg);
+}
+
+.gallery-item img {
+
+    width: 100%;
+
+    display: block;
+}
+
+.art-info {
+
+    padding: 20px;
+
+    border-top: 2px solid var(--cloud);
+
+    line-height: 1.8;
+
+    font-family: monospace;
+
+    color: var(--ink);
+}
+
+.art-info strong {
+
+    color: var(--blood);
+
+    letter-spacing: 1px;
+}
+
+
+.lightbox {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.95);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.lightbox img {
+
+    max-width: 90%;
+
+    max-height: 90%;
+
+    object-fit: contain;
+}
+
+#closeLightbox {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 40px;
+
+    font-size: 3rem;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+#backToTop{
+
+    position: fixed;
+
+    bottom: 35px;
+    right: 35px;
+
+    width: 60px;
+    height: 80px;
+
+    border: none;
+
+    border-radius: 10%;
+
+    background: var(--blood);
+
+    color: var(--paper);
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity .3s,
+        transform .3s,
+        background .25s;
+
+    z-index: 999;
+}
+
+#backToTop span{
+
+    font-size:11px;
+
+    letter-spacing:2px;
+}
+
+#backToTop.show{
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+/* ========================================
+   REGISTRY BOOT SCREEN
+======================================== */
+
+#bootScreen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#251315;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    transition:
+        opacity .6s ease,
+        visibility .6s;
+
+}
+
+#bootScreen.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.boot-window{
+
+    width:min(700px,90vw);
+
+    background:#f2f0eb;
+
+    color:#111;
+
+    border:4px solid black;
+
+    padding:50px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45);
+
+    position:relative;
+
+}
+
+.boot-window::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:url("../images/Crush-paper.png");
+
+    opacity:.18;
+
+    pointer-events:none;
+
+}
+
+.boot-window>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.boot-window h1{
+
+    text-align:center;
+
+    letter-spacing:5px;
+
+    margin-bottom:12px;
+
+}
+
+.boot-subtitle{
+
+    text-align:center;
+
+    color:var(--blood);
+
+    letter-spacing:3px;
+
+    margin-bottom:40px;
+
+}
+
+.boot-progress{
+
+    width:100%;
+
+    height:16px;
+
+    border:3px solid black;
+
+    overflow:hidden;
+
+    margin-bottom:35px;
+
+}
+
+#bootBar{
+
+    width:0%;
+
+    height:100%;
+
+    background:var(--blood);
+
+    transition:width .25s linear;
+
+}
+
+.boot-log{
+
+    font-family:monospace;
+
+    font-size:1rem;
+
+    letter-spacing:1px;
+
+    min-height:25px;
+
+}
+
+.boot-log p{
+
+    color:#222;
+
+}
+
+/* ========================================
+   GALLERY CONTROLS
+======================================== */
+
+.gallery-controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:30px;
+
+    margin:40px auto 50px;
+
+    max-width:900px;
+
+}
+
+/* Keep the search bar filling the remaining space */
+
+.gallery-controls #searchBar{
+
+    flex:1;
+
+    max-width:650px;
+
+    margin:0;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .gallery-controls{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:20px;
+
+    }
+
+    .gallery-controls #searchBar{
+
+        width:100%;
+
+    }
+
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.archive-card img{
+
+    width: 100%;
+
+    display: block;
+
+}
+
+/* ========================================
+   TEXT LABEL
+======================================== */
+
+.archive-info{
+
+    text-align: center;
+
+    margin-top: 12px;
+
+    font-family: monospace;
+
+    color: var(--ink);
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+.archive-label{
+
+    font-size: 0.75rem;
+
+    letter-spacing: 3px;
+
+    color: var(--blood);
+
+    margin-bottom: 6px;
+
+}
+
+/* ========================================
+   LIGHTBOX
+======================================== */
+
+.lightbox{
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.95);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+}
+
+.lightbox img{
+
+    max-width: 90%;
+
+    max-height: 90%;
+
+    object-fit: contain;
+
+}
+
+#closeLightbox{
+
+    position: absolute;
+
+    top: 25px;
+
+    right: 40px;
+
+    font-size: 3rem;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+

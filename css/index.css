@@ -1,0 +1,666 @@
+/* ========================================
+   REGISTRY COVER
+======================================== */
+
+.registry-cover{
+
+    padding:120px 30px 70px;
+
+}
+
+.registry-file{
+
+    position:relative;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:70px 60px;
+
+    background:var(--paper);
+
+    color:var(--ink);
+
+    border:4px solid var(--ink);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.35);
+
+    overflow:visible;
+
+}
+
+.registry-file::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:url("../images/Crush-paper.png");
+
+    background-size:cover;
+
+    opacity:.25;
+
+    pointer-events:none;
+
+}
+
+.registry-file>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ========================================
+   FILE TAB
+======================================== */
+
+.file-tab{
+
+    position:absolute;
+
+    top:-46px;
+
+    left:45px;
+
+    background:#d7c09b;
+
+    padding:14px 28px;
+
+    border:4px solid var(--ink);
+
+    border-bottom:none;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    z-index:10;
+
+}
+
+/* ========================================
+   STAMP
+======================================== */
+
+.registry-stamp{
+
+    position:absolute;
+
+    right:70px;
+
+    top:70px;
+
+    padding:12px 24px;
+
+    border:4px solid var(--blood);
+
+    color:var(--blood);
+
+    font-size:1.2rem;
+
+    font-weight:bold;
+
+    transform:rotate(-12deg);
+
+    letter-spacing:3px;
+
+}
+
+/* ========================================
+   HEADINGS
+======================================== */
+
+.registry-file h1{
+
+    text-align:center;
+
+    font-size:3.6rem;
+
+    letter-spacing:6px;
+
+    margin-bottom:10px;
+
+}
+
+.registry-file h2{
+
+    text-align:center;
+
+    color:var(--blood);
+
+    letter-spacing:4px;
+
+    margin-bottom:35px;
+
+}
+
+.registry-intro{
+
+    max-width:700px;
+
+    margin:auto;
+
+    text-align:center;
+
+    line-height:2;
+
+    font-size:1.1rem;
+
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+/* ========================================
+   REGISTRY DEPARTMENTS
+======================================== */
+
+.registry-navigation{
+
+    padding:90px 40px;
+
+    text-align:center;
+
+}
+
+.registry-navigation h2{
+
+    margin-bottom:50px;
+
+    letter-spacing:5px;
+
+}
+
+.department-board{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.department-module{
+
+    text-decoration:none;
+
+    color:var(--ink);
+
+    background:var(--paper);
+
+    border:4px solid var(--ink);
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:
+        10px 10px 0 rgba(0,0,0,.35);
+
+}
+
+.department-module::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:url("../images/Crush-paper.png");
+
+    background-size:cover;
+
+    opacity:.18;
+
+    pointer-events:none;
+
+}
+
+.module-header{
+
+    position:relative;
+
+    z-index:2;
+
+    background:#d7c09b;
+
+    border-bottom:4px solid var(--ink);
+
+    padding:18px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+}
+
+.module-body{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:35px;
+
+}
+
+.module-icon{
+
+    font-size:3rem;
+
+    margin-bottom:25px;
+
+}
+
+.module-body p{
+
+    line-height:1.8;
+
+    min-height:90px;
+
+}
+
+.module-body span{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    color:var(--blood);
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+}
+
+.department-module:hover{
+
+    transform:
+        translateY(-8px)
+        rotate(-1deg);
+
+    box-shadow:
+        14px 14px 0 var(--blood);
+
+}
+
+.department-module:hover .module-icon{
+
+    transform:scale(1.15);
+
+    transition:.3s;
+
+}
+
+@media(max-width:900px){
+
+    .department-board{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ========================================
+   LATEST WORK
+======================================== */
+
+.latest-registry{
+
+    padding:80px 40px;
+
+    text-align:center;
+
+}
+
+.latest-registry h2{
+
+    letter-spacing:4px;
+
+    margin-bottom:10px;
+
+}
+
+.latest-registry p{
+
+    color:var(--gray);
+
+    margin-bottom:45px;
+
+}
+
+.latest-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+.latest-card{
+
+    background:var(--paper);
+
+    color:var(--ink);
+
+    border:4px solid var(--ink);
+
+    overflow:hidden;
+
+    transition:.3s;
+
+}
+
+.latest-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.latest-card img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.latest-info{
+
+    padding:25px;
+
+    text-align:left;
+
+}
+
+.latest-info h3{
+
+    margin-bottom:10px;
+
+    color:var(--blood);
+
+}
+
+/* ========================================
+   STATS
+======================================== */
+
+.registry-statistics{
+
+    padding:90px 40px;
+
+    text-align:center;
+
+}
+
+.registry-statistics h2{
+
+    letter-spacing:4px;
+
+    margin-bottom:50px;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+.stat-card{
+
+    background:var(--paper);
+
+    color:var(--ink);
+
+    border:4px solid var(--ink);
+
+    padding:40px 20px;
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.stat-card h3{
+
+    font-size:3rem;
+
+    color:var(--blood);
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+}
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact-registry{
+
+    padding:100px 30px;
+
+}
+
+.contact-file{
+
+    position:relative;
+
+    max-width:850px;
+
+    margin:auto;
+
+    background:var(--paper);
+
+    color:var(--ink);
+
+    border:4px solid var(--ink);
+
+    padding:60px;
+
+    text-align:center;
+
+}
+
+.contact-file h2{
+
+    letter-spacing:4px;
+
+    margin-bottom:30px;
+
+}
+
+.contact-file p{
+
+    line-height:2;
+
+    margin-bottom:35px;
+
+}
+
+.registry-email{
+
+    font-size:1.25rem;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    margin-bottom:35px;
+
+    color:var(--blood);
+
+}
+
+.email-button{
+
+    display:inline-block;
+
+    background:var(--blood);
+
+    color:white;
+
+    padding:18px 45px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    border:3px solid var(--ink);
+
+    transition:.3s;
+
+}
+
+.email-button:hover{
+
+    background:var(--blood-light);
+
+    transform:translateY(-4px);
+
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media(max-width:900px){
+
+    .registry-file{
+
+        padding:45px 25px;
+
+    }
+
+    .registry-file h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .registry-stamp{
+
+        position:static;
+
+        display:inline-block;
+
+        margin:25px auto;
+
+    }
+
+    .latest-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .department-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contact-file{
+
+        padding:35px 20px;
+
+    }
+
+}
+
+@keyframes dossierOpen{
+
+    from{
+        opacity:0;
+        transform: translateY(80px);
+    }
+
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+
+.registry-stamp{
+
+    opacity:0;
+    transform: rotate(5deg) scale(.2);
+    transition:.5s;
+}
+
+
+.registry-stamp.active{
+
+    opacity:.75;
+    transform: rotate(12deg) scale(.7);
+}
+
+
+.registry-file{
+
+    animation: dossierOpen .8s ease-out forwards;
+}

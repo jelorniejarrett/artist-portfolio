@@ -1,0 +1,707 @@
+
+/* ========================================
+   ARTIST CARD
+======================================== */
+
+.flip-card {
+
+    width: 1100px;
+
+    max-width: 95%;
+
+    margin: 50px auto;
+
+    perspective: 2500px;
+
+    filter:
+        drop-shadow(
+            0 25px 50px rgba(0,0,0,.35)
+        );
+}
+
+.flip-card-inner {
+
+    position: relative;
+
+    width: 100%;
+
+    transition: .8s;
+
+    transform-style: preserve-3d;
+}
+
+.flip-card-inner.flipped {
+
+    transform: rotateY(180deg);
+}
+
+/* ========================================
+   CARD FRONT / BACK
+======================================== */
+
+.card-front,
+.card-back {
+
+    position: absolute;
+
+    width: 100%;
+
+    backface-visibility: hidden;
+
+    border: 4px solid var(--cloud);
+
+    background: var(--paper);
+
+    color: var(--paper-dark);
+
+    padding: 30px;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 25px 50px rgba(0,0,0,.35),
+        inset 0 0 20px rgba(255,255,255,.05);
+}
+
+.card-front::before,
+.card-back::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    color: var(--dark-paper);
+
+    background:
+
+        radial-gradient(
+            rgba(255,255,255,.05) 1px,
+            transparent 2px
+        );
+
+    background-size: 10px 10px;
+
+    opacity: .25;
+
+    pointer-events: none;
+}
+
+.card-front::after,
+.card-back::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: url("../images/Logo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 800px;
+
+    opacity: .15;
+    pointer-events: none;
+    z-index: 0;
+
+}
+
+.card-back {
+
+    transform: rotateY(180deg);
+
+    min-height: 700px;
+
+    color: var(--dark-paper);
+}
+
+.card-front {
+
+        animation:dossierOpen .8s ease;
+}
+
+.about-section {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    line-height: 1.8;
+}
+
+.about-section h2 {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    color: var(--blood);
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.about-section p {
+
+    margin-bottom: 15px;
+}
+
+.divider {
+
+    height: 2px;
+
+    background: var(--blood);
+
+    opacity: .3;
+
+    margin: 25px 0;
+}
+
+.contact-list {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.contact-list a {
+
+    color: var(--blood);
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.contact-list a:hover {
+
+    text-decoration: underline;
+}
+
+.registry-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.end-file {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    letter-spacing: 2px;
+}
+
+.end-file small {
+
+    opacity: .7;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.card-header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    border-bottom: 3px double var(--blood);
+
+    padding-bottom: 15px;
+
+    color: var(--blood);
+}
+
+/* ========================================
+   BODY
+======================================== */
+
+.card-body {
+
+    display: flex;
+
+    gap: 40px;
+
+    color: var(--dark-paper);
+
+    padding-top: 20px;
+}
+
+/* ========================================
+   PORTRAIT
+======================================== */
+
+.portrait {
+
+    padding: 10px;
+
+    background: var(--cloud);
+
+    border: 3px solid var(--blood);
+
+    border-radius: 18px;
+
+    position: relative;
+
+    display: inline-block;
+
+}
+
+.portrait img {
+
+    width: 250px;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 3px solid var(--cloud);
+
+    display: block;
+}
+
+.portrait::after {
+
+    content: "VERIFIED";
+
+    position: absolute;
+
+    top: -10px;
+    right: -10px;
+
+    background: var(--blood);
+
+    color: white;
+
+    border: 2px solid var(--ink);
+
+    padding: 6px 12px;
+
+    font-size: .8rem;
+
+    font-weight: bold;
+
+    transform: rotate(12deg);
+
+    box-shadow:
+        3px 3px 0 rgba(0,0,0,.25);
+}
+
+/* ========================================
+   INFO GRID
+======================================== */
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 15px;
+
+}
+
+/* ========================================
+   RESTRICTED BOX
+======================================== */
+
+.restricted-box {
+    padding: 10px;
+}
+
+.restricted {
+
+    background: #111;
+
+    color: #ff4d4d;
+
+    padding: 12px;
+
+    text-align: center;
+
+    letter-spacing: 4px;
+
+    font-weight: 900;
+
+    border: 2px solid #ff4d4d;
+
+    margin-top: 10px;
+}
+
+/*   ATTRIBUTES
+======================================== */
+
+.attributes {
+
+    margin-top: 20px;
+
+    border-top: 2px solid var(--ink);
+
+    padding-top: 20px;
+
+    color: var(--dark-paper);
+
+}
+
+.attribute {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 12px 0;
+}
+
+.attribute span {
+
+    width: 120px;
+
+    font-weight: bold;
+}
+
+.file-status {
+
+    margin-top: 15px;
+
+    padding-top: 15px;
+
+    border-top: 1px dashed rgba(0,0,0,.25);
+
+}
+
+.file-status h4 {
+
+    font-size: .9rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+
+    color: var(--blood);
+}
+
+.status-tag {
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+
+}
+
+.access-prompt {
+
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    background: rgba(125,47,56,.08);
+
+    border: 1px solid var(--blood);
+
+    border-radius: 999px;
+
+    font-size: .75rem;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: var(--blood);
+
+    animation: restrictedPulse 2.5s infinite;
+}
+.attribute strong {
+
+    min-width: 40px;
+
+    text-align: right;
+}
+
+.bar {
+
+    flex: 1;
+
+    height: 14px;
+
+    background:
+        rgba(0,0,0,.08);
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+.fill {
+
+    height: 100%;
+
+    border-radius: 999px;
+}
+
+.ss {
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            gold,
+            #fff4a3
+        );
+}
+
+.a {
+
+    width: 85%;
+
+    background: #c94f5d;
+}
+
+.bp {
+
+    width: 75%;
+
+    background: #b56d75;
+}
+
+.b {
+
+    width: 65%;
+
+    background: #99636a;
+}
+
+.c {
+
+    width: 50%;
+
+    background: #74565a;
+}
+
+.bottom-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    margin-top: 30px;
+
+    border-top: 2px solid var(--ink);
+
+    padding-top: 20px;
+
+    color: var(--dark-paper);
+}
+
+.signature {
+
+    margin-top: 10px;
+}
+
+.signature img {
+
+    width: 220px;
+
+    height: auto;
+
+    display: block;
+
+    opacity: .95;
+}
+
+.signature::after {
+
+    content: "";
+
+    display: block;
+
+    width: 250px;
+
+    margin-top: 5px;
+}
+
+
+.seal {
+
+    width: 120px;
+
+    opacity: .8;
+
+    transform: rotate(-8deg);
+
+    filter:
+        brightness(0)
+        sepia(.8)
+        hue-rotate(-20deg);
+}
+
+@keyframes restrictedPulse {
+
+    0%,
+    100% {
+
+        opacity: .45;
+
+        transform: scale(1);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: scale(1.03);
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE ARTIST CARD
+======================================== */
+
+@media (max-width: 900px) {
+
+
+    .flip-card {
+
+        width: 420px;
+        max-width: 95vw;
+        margin: 30px auto;
+
+    }
+
+    .card-front,
+    .card-back {
+
+        padding: 24px;
+        min-height: 900px;
+        border-radius: 32px;
+
+    }
+
+    .card-header {
+
+        margin-bottom: 20px;
+
+    }
+
+    .card-header h1 {
+
+        font-size: 1.5rem;
+
+    }
+
+
+    .card-body {
+
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+
+    }
+
+
+    .portrait img {
+
+        width: 180px;
+        height: 180px;
+
+    }
+
+
+    .info-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .attribute span {
+
+        width: 90px;
+        font-size: .9rem;
+
+    }
+
+
+    .contact-list {
+
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+    .registry-info {
+
+        flex-direction: column;
+
+    }
+
+    .bottom-row {
+
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .signature img {
+
+        width: 180px;
+
+    }
+
+    .seal {
+
+        width: 90px;
+
+    }
+
+}
+
+@keyframes dossierOpen{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}

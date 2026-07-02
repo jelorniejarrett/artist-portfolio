@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Card</title>
+    <link rel="icon" type="image/svg+xml" href="images/Logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/artcard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="Logo">
+        </a>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="artdirector.html">Art Director</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="artcard.html">About Me</a></li>
+
+        </ul>
+    </header>
+
+<div class="artist-card-page">
+
+    <div class="flip-card" ondblclick="flipCard()">
+
+        <div class="flip-card-inner" id="card">
+
+            <!-- FRONT -->
+
+            <div class="card-front">
+
+                <div class="card-header">
+                    <h1>MASTER ILLUSTRATOR REGISTRY</h1>
+                    <p>Independent Creator License</p>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="left-panel">
+
+                        <div class="portrait">
+                            <img src="images/Art-license-photo.png" alt="Registry Portrait">
+                        </div>
+
+                    </div>
+
+                    <div class="right-panel">
+
+                        <h2>IDENTIFICATION</h2>
+
+                        <div class="info-grid">
+
+                            <div>
+                                <span>Name</span>
+                                <p> ████████████</p>
+                            </div>
+
+                            <div>
+                                <span>Alias</span>
+                                <p>@OP._Ecstasy</p>
+                            </div>
+
+                            <div>
+                                <span>Class</span>
+                                <p>Character Illustrator</p>
+                            </div>
+
+                            <div>
+                                <span>License ID</span>
+                                <p>MIR-2026-001</p>
+                            </div>
+
+                        </div>
+
+                        <div class="restricted-box">
+
+                            <h3>CLEARANCE LEVEL</h3>
+
+                            <div class="restricted">
+                                RESTRICTED
+                            </div>
+
+                            <p class="small-note">
+
+                                Certain registry records remain
+                                inaccessible to public viewers.
+
+                            </p>
+
+                            <div class="file-status">
+
+                            <h4>FILE STATUS</h4>
+
+                            <p class="status-tag">
+                                PARTIALLY REDACTED
+                            </p>
+
+                            <p class="access-prompt">
+                                [ DOUBLE TAP TO ACCESS RESTRICTED FILE ]
+                            </p>
+
+</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="attributes">
+
+                    <h2>ARTIST ATTRIBUTES</h2>
+
+                    <div class="attribute">
+
+                        <span>Creativity</span>
+
+                        <div class="bar">
+                            <div class="fill ss"></div>
+                        </div>
+
+                        <strong>SS</strong>
+
+                    </div>
+
+                    <div class="attribute">
+
+                        <span>Rendering</span>
+
+                        <div class="bar">
+                            <div class="fill a"></div>
+                        </div>
+
+                        <strong>A</strong>
+
+                    </div>
+
+                    <div class="attribute">
+
+                        <span>Anatomy</span>
+
+                        <div class="bar">
+                            <div class="fill a"></div>
+                        </div>
+
+                        <strong>A</strong>
+
+                    </div>
+
+                    <div class="attribute">
+
+                        <span>Perspective</span>
+
+                        <div class="bar">
+                            <div class="fill bp"></div>
+                        </div>
+
+                        <strong>B+</strong>
+
+                    </div>
+
+                    <div class="attribute">
+
+                        <span>Consistency</span>
+
+                        <div class="bar">
+                            <div class="fill b"></div>
+                        </div>
+
+                        <strong>B</strong>
+
+                    </div>
+
+                    <div class="attribute">
+
+                        <span>Speed</span>
+
+                        <div class="bar">
+                            <div class="fill c"></div>
+                        </div>
+
+                        <strong>C+</strong>
+
+                    </div>
+
+                </div>
+
+                <div class="bottom-row">
+
+                    <div>
+
+                        <h3>SPECIALIZATIONS</h3>
+
+                        <ul>
+
+                            <li>✓ Character Design</li>
+                            <li>✓ Fan Art</li>
+                            <li>✓ Poster Composition</li>
+                            <li>✓ Digital Painting</li>
+
+                        </ul>
+
+                    </div>
+
+                    <div>
+
+                        <h3>AUTHORIZED SIGNATURE</h3>
+
+                        <div class="signature">
+
+                            <img
+                                src="images/xtc-signiture.png"
+                                alt="Artist Signature"
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <h3>REGISTRY SEAL</h3>
+
+                        <img
+                            src="images/Logo.svg"
+                            class="seal"
+                            alt=""
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- BACK -->
+
+            <div class="card-back">
+
+                <div class="about-section">
+
+                    <h2>ABOUT THE ILLUSTRATOR</h2>
+
+                    <p>
+                        Hello, I am Jelornie Jarrett, a Jamaican-based Computer Science
+                        student at the University of Technology, Jamaica, and a character
+                        illustrator operating under the alias <strong>OP._Ecstasy</strong>.
+                    </p>
+
+                    <p>
+                        My work focuses on character illustration, fan art, poster
+                        composition, and digital painting, with a strong interest in
+                        expressive storytelling, dynamic posing, and stylized rendering.
+                        Drawing inspiration from anime, video games, movies, and contemporary
+                        digital artists, I aim to create illustrations that feel both
+                        visually striking and memorable.
+                    </p>
+
+                    <p>
+                        Outside of art, I am actively developing my skills in software
+                        engineering and web development, combining my interests in
+                        technology and creativity through projects such as this portfolio
+                        website. My goal is to continue growing as both an artist and
+                        developer while building experiences that blend visual design with
+                        interactive technology.
+                    </p>
+
+                    <p>
+                        Thank you for taking the time to visit my registry file.
+                    </p>
+
+                    <div class="divider"></div>
+
+                    <h3>REGISTRY CONTACTS</h3>
+
+                    <div class="contact-list">
+            
+                        <p>
+                            <strong>Twitter/X</strong><br>
+                            <a href="https://x.com/OP_Ecstasytwt" target="_blank">
+                                @OP_Ecstasytwt
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </p>
+
+                        <p>
+                            <strong>Instagram</strong><br>
+                            <a href="https://instagram.com/op_ecstasy" target="_blank">
+                                @op_ecstasy
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </p>
+
+                        <p>
+                            <strong>TikTok</strong><br>
+                            <a href="https://tiktok.com/@op_ecstasy" target="_blank">
+                                @op_ecstasy
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                        </p>
+
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="registry-info">
+
+                        <p>
+                            <strong>Portfolio Status:</strong>
+                            ACTIVE
+                        </p>
+
+                        <p>
+                            <strong>Registry Classification:</strong>
+                            Character Illustrator
+                        </p>
+
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="end-file">
+
+                        <p>END OF FILE</p>
+
+                        <small>MIR-2026-001</small>
+
+                    </div>
+
+</div>
+
+    <footer>
+
+        <p>
+
+            MASTER ILLUSTRATOR REGISTRY
+
+        </p>
+
+        <p>
+
+            © 2026 OP._Ecstasy
+
+        </p>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

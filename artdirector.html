@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Art Director Mode</title>
+
+        <link rel="icon" type="image/svg+xml" href="images/Logo.svg">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/artdirector.css">
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <nav class="navbar">
+
+                <a href="index.html" class="logo">
+                    <img src="images/logo.svg" alt="Logo">
+                </a>
+
+                <ul class="nav-links">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="artdirector.html">Art Director</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="artcard.html">About Me</a></li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <section class="director-page">
+
+            <div class="registry-file">
+
+                <h1>MASTER ILLUSTRATOR REGISTRY</h1>
+
+                <h2>ART DIRECTOR</h2>
+
+                <div class="registry-stamp">
+                    ACTIVE ANALYSIS SYSTEM
+                </div>
+
+                <p class="director-description">
+
+                    Every illustration tells a different story.
+
+                    Submit your project requirements and allow the Registry Analysis System
+                    to identify the artwork most compatible with your creative vision.
+
+                    <br><br>
+
+                    Was a piece archived specifically for your project?
+
+                    Run the scan and find out.
+
+                </p>
+
+                <div class="analysis-layout">
+
+                    <!-- LEFT SIDE -->
+
+                    <div class="registry-panel">
+
+                        <h3>PROJECT PARAMETERS</h3>
+
+                        <div class="director-form">
+
+                            <label>Project Type</label>
+
+                            <select id="projectType">
+                                
+                                <option>Select</option>
+                                <option>Poster</option>
+                                <option>Character Illustration</option>
+                                <option>Portrait</option>
+
+                            </select>
+
+                            <label>Mood</label>
+
+                            <select id="mood">
+
+                                <option>Select</option>
+                                <option>Dark</option>
+                                <option>Energetic</option>
+                                <option>Epic</option>
+                                <option>Calm</option>
+
+                            </select>
+
+                            <label>Style</label>
+
+                            <select id="style">
+
+                                <option>Select</option>
+                                <option>Anime</option>
+                                <option>Semi-Realistic</option>
+                                <option>Painterly</option>
+
+                            </select>
+
+                            <label>Color Theme</label>
+
+                            <select id="color">
+
+                                <option>Select</option>
+                                <option>Red</option>
+                                <option>Blue</option>
+                                <option>Green</option>
+                                <option>Purple</option>
+                                <option>Yellow</option>
+
+                            </select>
+
+                            <button id="scanButton">
+
+                                RUN COMPATIBILITY SCAN
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT SIDE -->
+
+                    <div class="results-panel">
+
+                        <div id="results">
+
+                            <div class="waiting-state">
+
+                                <h3>
+                                    REGISTRY STATUS
+                                </h3>
+
+                                <p>
+                                    Waiting for project parameters...
+                                </p>
+
+                                <p class="small-text">
+
+                                    No compatibility scan has been initiated.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+            <footer>
+
+                <p>
+
+                    MASTER ILLUSTRATOR REGISTRY
+
+                </p>
+
+                <p>
+
+                    © 2026 OP._Ecstasy
+
+                </p>
+
+            </footer>
+
+            <script src="js/main.js"></script>
+            <script src="js/gallery.js"></script>
+            <script src="js/artdirector.js"></script>
+
+    </body>
+
+</html>

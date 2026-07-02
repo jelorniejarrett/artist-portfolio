@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <link rel="icon" type="image/svg+xml" href="images/Logo.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+
+<body>
+
+    <div id="bootScreen">
+
+        <div class="boot-window">
+
+            <h1>MASTER ILLUSTRATOR REGISTRY</h1>
+
+            <p class="boot-subtitle">
+                INITIALIZING ARCHIVE DATABASE
+            </p>
+
+            <div class="boot-progress">
+
+                <div id="bootBar"></div>
+
+            </div>
+
+            <div class="boot-log">
+
+                <p id="bootText">
+
+                    Connecting...
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <img src="images/logo.svg" alt="Logo">
+            </a>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="artdirector.html">Art Director</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="artcard.html">About Me</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+<section class="gallery-page">
+
+    <h1>MASTER ILLUSTRATOR REGISTRY ARCHIVE</h1>
+
+
+    <input
+        type="text"
+        id="searchBar"
+        placeholder="Search subject, classification, color..."
+    >
+
+
+    <div id="galleryGrid" class="gallery-grid"></div>
+
+
+</section>
+
+<div id="lightbox" class="lightbox">
+
+    <span id="closeLightbox">&times;</span>
+
+    <img id="lightboxImage">
+
+</div>
+
+<button id="backToTop">
+
+    ▲
+
+    <span>TOP</span>
+
+</button>
+
+    <footer>
+
+        <p>
+
+            MASTER ILLUSTRATOR REGISTRY
+
+        </p>
+
+        <p>
+
+            © 2026 OP._Ecstasy
+
+        </p>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+
+</body>
+</html>
